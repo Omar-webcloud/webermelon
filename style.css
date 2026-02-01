@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roslindale', sans-serif;
+}
+
+.nav-container {
+
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 520px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quickxs{
+    display: flex;
+    gap: 24px;
+    justify-content: end;
+    align-items: center;
+}
+
+.banner{
+    padding: 70px;
+    background-image: url('assets/banner-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.banner-text{
+    text-align: center;
+}
+.banner h1{
+    font-size: 64px;
+    font-weight: 500;
+    color: #303635;
+    margin-bottom: 40px;
+    
+}
+.banner p{
+     font-family: 'Inter', sans-serif;
+     color: #5F6060;
+}
+.banner marquee{
+    font-size: 24px;
+    font-weight: 600;
+    color: #6D7373;
+    letter-spacing: 15px;
+}
