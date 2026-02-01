@@ -217,89 +217,126 @@ marquee {
   cursor: pointer;
   color: #002222;
 }
+
 .design {
+  background: #02494B;
+  padding: clamp(30px, 5vw, 70px);
   max-width: 1440px;
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  background-color: #02494b;
   margin: 0 auto;
-  padding: 70px;
+  position: relative;
+  overflow: hidden;
   background-image: url(assets/bg-2.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom;
-  padding-bottom: 0;
-  position: relative;
-  overflow: hidden;
+  background-position: bottom left;
 }
-.design .content {
-  flex: 1;
-  padding-bottom: 150px;
-}
-.design .img-content {
-  flex: 1;
+
+.design-inner {
   display: flex;
-  align-items: flex-end;
-  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(20px, 4vw, 50px);
 }
-.design .title {
-  font-size: 56px;
-  font-weight: 500;
-  color: #ffffff;
-  margin-bottom: 30px;
-  text-align: start;
-}
-.design .subtitle,
-.design a {
-  color: #ffffff;
-  padding-bottom: 25px;
-}
-.design .subtitle {
-  font-size: 18px;
-  line-height: 150%;
-  margin-bottom: 25px;
-}
-.design p,
-.design a {
-  font-family: "Inter", sans-serif;
-}
-.badge-2 {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  width: 120px;
+
+.left {
+  width: 45%; 
+  color: #fff;
   z-index: 2;
+  flex-shrink: 0;
 }
-.img-content img:not(.badge-2) {
+
+.left h1 {
+  font-size: clamp(24px, 4vw, 56px);
+  line-height: 1.15;
+  margin: 0 0 24px 0;
+  font-weight: 500;
+}
+
+.left p {
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  opacity: .9;
+  font-family: 'Inter', sans-serif;
+  max-width: 450px;
+}
+
+.read-more {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(14px, 1.5vw, 18px);
+  border-bottom: 1px solid #fff;
+  padding-bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 48px;
+  font-family: 'Inter', sans-serif;
+}
+
+.stats {
+  background: #fff;
+  color: #00494A;
+  display: flex;
+  justify-content: space-around;
+  padding: clamp(15px, 2vw, 30px);
   width: 100%;
-  height: auto;
-  display: block;
-}
-.number-box {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 30px;
-  margin-top: 60px;
-  background-color: #ffffff;
+  max-width: 520px;
   background-image: url(assets/bg-img.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.number {
-  text-align: center;
-  color: #00494a;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 18px;
+
+.stat span {
+  font-size: clamp(12px, 1.5vw, 18px);
+  display: block;
+  margin-bottom: 10px;
 }
-.number h2 {
-  font-size: 36px;
+
+.stat h3 {
+  font-size: clamp(20px, 2.5vw, 36px);
+  margin: 0;
   font-weight: 500;
 }
+
+.right {
+  width: 50%;
+  position: relative;
+}
+
+.right .badge {
+  position: absolute;
+  right: -5%;
+  top: -15%;
+  width: clamp(80px, 12vw, 140px);
+  z-index: 5;
+}
+
+.grid-img {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: clamp(10px, 1.5vw, 20px);
+  height: auto;
+  aspect-ratio: 520 / 520;
+  align-items: end;
+}
+
+.img {
+  background-image: url("assets/img-content.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.img1 {
+  background-position: 20% center; 
+}
+
+.img2 {
+  background-position: 80% center;
+  height: 90%;
+}
+
 
 .why {
   padding: 120px 70px;
@@ -338,13 +375,15 @@ marquee {
   line-height: 150%;
 }
 
+
 .instant {
-  padding: 120px 70px;
+  padding: clamp(40px, 8vw, 120px) clamp(20px, 5vw, 70px);
   max-width: 1440px;
+  margin: 0 auto;
 }
 .instant .instant-container {
   background-color: #00494a;
-  padding: 90px 280px;
+  padding: clamp(40px, 6vw, 90px) clamp(20px, 15vw, 280px);
   text-align: center;
   background-image:
     url(assets/bg-2.png), url(assets/stars-bg.png), url(assets/star.png);
@@ -357,25 +396,28 @@ marquee {
 }
 
 .instant-container h2 {
-  font-size: 48px;
+  font-size: clamp(28px, 3.5vw, 48px);
   font-weight: 500;
   color: #ffffff;
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 2vw, 30px);
 }
 .instant-container p {
   font-family: "Inter", sans-serif;
   color: #d1e2e2;
-  margin-bottom: 50px;
+  margin-bottom: clamp(30px, 3.5vw, 50px);
   line-height: 150%;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 .instant-container .btn-container {
   width: 100%;
   max-width: 440px;
+  margin: 0 auto;
   display: flex;
-  gap: 30px;
+  gap: clamp(15px, 2vw, 30px);
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .btn-container .btn-quote {
   font-family: "Inter", sans-serif;
@@ -387,6 +429,9 @@ marquee {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  min-width: 140px;
+  white-space: nowrap;
 }
 .btn-container .btn-quote img {
   padding-right: 10px;
@@ -401,10 +446,14 @@ marquee {
   padding: 10px 20px;
   text-decoration: none;
   font-weight: 400;
+  flex: 1;
+  min-width: 140px;
+  white-space: nowrap;
 }
 
+
 footer {
-    padding: 70px;
+    padding: clamp(40px, 5vw, 70px) clamp(20px, 5vw, 70px);
     max-width: 1440px;
     margin: 0 auto;
     background-color: #FAFAFA;
@@ -415,14 +464,17 @@ footer .about {
     align-items: flex-start;
     margin-bottom: 50px;
     width: 100%;
-    gap: 40px;
+    gap: clamp(30px, 4vw, 40px);
+    flex-wrap: wrap; 
 }
 footer .about p {
     font-family: 'Inter', sans-serif;
     line-height: 150%;
     color: #5A5E5E;
+    font-size: clamp(14px, 1.5vw, 16px);
 }
 footer .about .info {
+    flex: 1 1 300px;
     max-width: 360px;
     display: flex;
     flex-direction: column;
@@ -435,14 +487,18 @@ footer .about .social {
 }
 footer .about .links {
     display: flex;
-    gap: 80px;
+    gap: clamp(40px, 6vw, 80px);
+    flex: 2 1 auto;
+    flex-wrap: wrap;
 }
 footer .about .links div {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    min-width: 120px;
 }
 footer .about .msg {
+    flex: 1 1 250px; 
     max-width: 300px;
     display: flex;
     flex-direction: column;
@@ -451,7 +507,7 @@ footer .about .msg {
 }
 footer .about .msg h2 {
     font-weight: 500;
-    font-size: 32px;
+    font-size: clamp(24px, 2.5vw, 32px);
     color: #303635;
     line-height: 120%;
 }
@@ -470,6 +526,8 @@ footer .bottom {
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 footer .bottom p {
     font-family: 'Inter', sans-serif;
@@ -479,51 +537,35 @@ footer .bottom p {
 }
 footer .bottom .bottom-links {
     display: flex;
-    gap: 40px;
+    gap: clamp(20px, 4vw, 40px);
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1200px) {
     .nav-container { padding: 20px 40px; }
     .banner { padding: 5%; }
     .products { gap: 30px; }
-    .design .title { font-size: 48px; }
+    .left h1 { font-size: 48px; }
 }
 
 @media screen and (max-width: 992px) {
     .nav-container { gap: 20px; }
     .services { grid-template-columns: repeat(2, 1fr); }
     .products { grid-template-columns: repeat(2, 1fr); }
-    .design { grid-template-columns: 1fr; padding: 40px; text-align: center; }
-    .design .content { padding-bottom: 40px; }
-    .design .title, .design .subtitle { text-align: center; }
-    .design .img-content { align-items: center; justify-content: center; width: 100%; }
-    .badge-2 { right: 10%; top: 0; }
-    .number-box { grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 20px; margin-top: 40px; }
-    footer .about { flex-direction: column; gap: 40px; }
-    footer .about .links { gap: 40px; flex-wrap: wrap; }
 }
 
 @media screen and (max-width: 768px) {
-    .design .title { font-size: 36px; }
-    .number-box { display: flex; flex-direction: column; }
     .services { grid-template-columns: 1fr; }
     .products { gap: 20px; }
-    footer { padding: 40px 20px; }
-    footer .about { flex-direction: column; align-items: stretch; }
-    footer .about .links { flex-direction: column; gap: 30px; }
-    footer .bottom { flex-direction: column; gap: 20px; }
 }
 
 @media screen and (max-width: 480px) {
     .banner { padding: 20px; }
     .banner h1 { font-size: 32px; }
     .products { grid-template-columns: 1fr; }
-    .design .title { font-size: 28px; }
-    .number h2 { font-size: 28px; }
-    footer .about .msg h2 { font-size: 24px; }
 }
 
-/* Side Menu Styles */
+
 .side-menu {
     position: fixed;
     top: 0;
