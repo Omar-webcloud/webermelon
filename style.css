@@ -58,6 +58,11 @@
      font-family: 'Inter', sans-serif;
      color: #5F6060;
 }
+
+.img-grid h3{
+    font-weight: 400;
+}
+
 marquee{
     font-size: 24px;
     font-weight: 600;
