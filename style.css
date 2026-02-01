@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'Roslindale';
+    src: url('/font/Roslindale-DisplayMedium-Testing.ttf') format('truetype');
+    
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roslindale', sans-serif;
+   
 }
+
 
 .nav-container {
 
@@ -14,6 +21,7 @@
     gap: 520px;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .quickxs{
@@ -26,10 +34,11 @@
 .banner{
    
     margin: 0 auto;
-   
+    margin-top: 40px;
     background-image: url('assets/banner-bg.png');
     background-size: cover;
     background-position: center;
+   
 }
 .banner-text{
     text-align: center;
@@ -39,6 +48,7 @@
     font-weight: 500;
     color: #303635;
     margin-bottom: 40px;
+    line-height: 130%;
     
 }
 .banner p{
@@ -50,6 +60,7 @@ marquee{
     font-weight: 600;
     color: #6D7373;
     letter-spacing: 15px;
+     margin-top: 40px;
 }
 
 .img-grid{
@@ -58,7 +69,12 @@ marquee{
     gap: 80px;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px 40px 20px;
+    padding: 0 ;
+    margin-top: 40px;
+    
+
+    
+   
 }
 .img-grid .badge{
     position: relative;
@@ -99,5 +115,76 @@ marquee{
 }
 .horizontal-scroll::-webkit-scrollbar {
     display: none;
+}
+
+
+
+.popular{
+    margin: 0 auto;
+    max-width: 1440px;
+    
+}
+
+.popular h2{
+    font-size: 48px;
+    font-weight: 500;
+    color: #303635;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.popular .collection-tag{
+     display: flex;
+     color: #414141;
+     text-align: center;
+     justify-content: center;
+     margin-bottom: 80px;
+     gap: 44px;
+}
+.collection-tag p:hover{
+    color: #00494A;
+    cursor: pointer;
+
+}
+.collection-tag p:active, .collection-tag p:focus{
+    text-decoration: underline;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    margin-bottom: 140px;
+    
+}
+
+.product-card img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.product-card .price{
+    color: #888888;
+    margin-top: 14px;
+}
+.see-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #00494A;
+    margin-bottom: 140px;
+}
+.see-all a{
+   
+    text-decoration: underline;
+    color: #00494A;
+    display: flex;
+    gap: 10px;
+}
+
+.see-all a:hover{
+    cursor: pointer;
+    color: #002222;
 }
 

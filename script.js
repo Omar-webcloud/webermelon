@@ -4,3 +4,6 @@ scrollContainer.addEventListener("wheel", (event) => {
     scrollContainer.scrollLeft += event.deltaY;
 
 });
+
+
+
