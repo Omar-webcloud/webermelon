@@ -373,3 +373,10 @@ marquee{
     text-decoration: none;
     font-weight: 400;
 }
+
+footer{
+    padding: 70px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+}
