@@ -8,7 +8,7 @@
   font-family: "Roslindale", sans-serif;
 }
 body {
-  margin: 0;
+  margin: 0 auto;
 }
 .nav-container {
   max-width: 1440px;
@@ -28,6 +28,10 @@ body {
      width: clamp(24px, 4vw, 32px);
      height: auto;
 }
+.nav-toggler img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 .quickxs {
   display: flex;
   gap: clamp(10px, 2.5vw, 24px);
@@ -42,7 +46,7 @@ body {
     max-width: 1440px;
     padding: 70px 70px 0;
     margin: 40px auto 0;
-    background-image: url('assets/banner-bg.png');
+    background-image: url('assets/banner-bg.svg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
@@ -71,12 +75,17 @@ body {
     white-space: normal;
 }
 marquee {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 500;
     color: #6D7373;
-    letter-spacing: 15px;
+    letter-spacing: 2%;
     margin-top: 80px;
+    word-spacing: 1em;
+    overflow-x: hidden;
 }
+
+
+
 .img-grid {
     display: flex;
     justify-content: space-between;
@@ -131,7 +140,7 @@ marquee {
 }
 .horizontal-scroll {
     max-width: 1440px;
-    padding: 5%;
+    padding: 0 5% ;
     display: flex;
     gap: 3%;
     overflow-x: scroll;
@@ -194,6 +203,11 @@ marquee {
 .product-card img {
   width: 100%;
   margin-bottom: 20px;
+}
+.product-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #303635;
 }
 .product-card .price {
   color: #888888;
@@ -306,8 +320,8 @@ marquee {
 
 .right .badge {
   position: absolute;
-  right: -5%;
-  top: -15%;
+  right: 3%;
+  top: -12%;
   width: clamp(80px, 12vw, 140px);
   z-index: 5;
 }
@@ -342,6 +356,7 @@ marquee {
   padding: 120px 70px;
   background-color: #fafafa;
   max-width: 1440px;
+    margin: 0 auto;
 }
 
 .why h1 {
