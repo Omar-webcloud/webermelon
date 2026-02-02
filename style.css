@@ -265,8 +265,9 @@ body {
     left: 0;
     right: 0;
     top:30%;
+    top:30%;
     z-index: 100;
-    
+    cursor: grab;
 }
 .silder span{
     padding: 5px;
