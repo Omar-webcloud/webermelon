@@ -49,7 +49,79 @@ body {
 .quickxs img:hover {
     cursor: pointer;
     transform: scale(1.1);
+
 }
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100vh;
+    background-color: #FAFAFA;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu .close-btn {
+    align-self: flex-end;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #303635;
+    margin-bottom: 40px;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 24px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #303635;
+    font-family: 'Roslindale', serif;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.side-menu ul li a:hover {
+    color: #00494A;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 .banner {
     /* max-width: 1440px; */
     padding: 70px 70px 0;
@@ -335,8 +407,8 @@ body {
   width: 100%;
   max-width: 520px;
   background-image: url(assets/bg-img.png);
-  background-size: 70%;
-  background-repeat: repeat-y;
+  background-size: 100%;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -626,6 +698,10 @@ footer .about .msg a {
 @media screen and (max-width: 768px) {
     .services { grid-template-columns: 1fr; }
     .products { gap: 20px; }
+    .design-inner { flex-direction: column; align-items: center;
+                     }
+    .stats { flex-direction: column; gap: 20px; }
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -634,73 +710,4 @@ footer .about .msg a {
     .products { grid-template-columns: 1fr; }
 }
 
-
-.side-menu {
-    position: fixed;
-    top: 0;
-    left: -320px;
-    width: 300px;
-    height: 100vh;
-    background-color: #FAFAFA;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-    transition: left 0.3s ease-in-out;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-.side-menu.active {
-    left: 0;
-}
-
-.side-menu .close-btn {
-    align-self: flex-end;
-    font-size: 32px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #303635;
-    margin-bottom: 40px;
-}
-
-.side-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.side-menu ul li {
-    margin-bottom: 24px;
-}
-
-.side-menu ul li a {
-    text-decoration: none;
-    font-size: 24px;
-    color: #303635;
-    font-family: 'Roslindale', serif;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.side-menu ul li a:hover {
-    color: #00494A;
-}
-
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s;
-}
-
-.menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
 
