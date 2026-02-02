@@ -6,6 +6,8 @@ if (scrollContainer) {
   });
 }
 
+
+
 const toggler = document.querySelector(".nav-toggler");
 const sideMenu = document.querySelector(".side-menu");
 const closeBtn = document.querySelector(".close-btn");
@@ -26,12 +28,12 @@ if (overlay) {
   overlay.addEventListener("click", toggleMenu);
 }
 
+
 const tabs = document.querySelectorAll(".collection-tag p");
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-   
     tabs.forEach((t) => t.classList.remove("active"));
-    
+
     tab.classList.add("active");
   });
 });
