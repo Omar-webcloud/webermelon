@@ -39,69 +39,27 @@ tabs.forEach((tab) => {
 });
 
 
-const productData = [
-  {
-    id: 1,
-    title: "Vintage Single Sofa 2024",
-    category: "Sofa",
-    price: 18500,
-    image: "assets/sofa_1.png"
-  },
-  {
-    id: 2,
-    title: "Modern Chair Classic",
-    category: "Chair",
-    price: 18000,
-    image: "assets/chair_1.png"
-  },
-  {
-    id: 3,
-    title: "Comfort Wooden Chair",
-    category: "Chair",
-    price: 18000,
-    image: "assets/chair_2.png"
-  },
-  {
-    id: 4,
-    title: "Luxury Double Sofa",
-    category: "Sofa",
-    price: 18000,
-    image: "assets/sofa_1.png"
-  },
-  {
-    id: 5,
-    title: "Premium Sofa Set",
-    category: "Sofa",
-    price: 18500,
-    image: "assets/sofa_1.png"
-  },
-  {
-    id: 6,
-    title: "Classic Chair 2024",
-    category: "Chair",
-    price: 18000,
-    image: "assets/chair_1.png"
-  },
-  {
-    id: 7,
-    title: "Minimal Chair",
-    category: "Chair",
-    price: 18000,
-    image: "assets/chair_2.png"
-  },
-  {
-    id: 8,
-    title: "Elegant Sofa",
-    category: "Sofa",
-    price: 18000,
-    image: "assets/sofa_1.png"
-  }
-];
 
+const tags = document.querySelectorAll(".collection-tag p");
+const products = document.querySelectorAll(".product-card");
 
+tags.forEach(tag => {
+  tag.addEventListener("click", () => {
+    tags.forEach(t => t.classList.remove("active"));
+    tag.classList.add("active");
 
+    const category = tag.textContent.toLowerCase();
 
-
+    products.forEach(product => {
+      const imgSrc = product.querySelector("img").src.toLowerCase();
+      if (imgSrc.includes(category) || category === "all") {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  });
+});
 
 
 
