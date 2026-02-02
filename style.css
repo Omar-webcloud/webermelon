@@ -25,12 +25,16 @@ body {
     height: auto;
 }
 .nav-toggler img {
-     width: clamp(24px, 4vw, 32px);
+     width: clamp(90%, 4vw, 32px);
      height: auto;
 }
 .nav-toggler img:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+.nav-toggler img:active {
+    transform: rotate(185deg);
+    transition: transform 0.5s ease;
 }
 .quickxs {
   display: flex;
@@ -42,8 +46,12 @@ body {
     width: clamp(18px, 3vw, 24px);
     height: auto;
 }
+.quickxs img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 .banner {
-    max-width: 1440px;
+    /* max-width: 1440px; */
     padding: 70px 70px 0;
     margin: 40px auto 0;
     background-image: url('assets/banner-bg.svg');
@@ -74,15 +82,38 @@ body {
     font-size: clamp(12px, 1.5vw, 18px);
     white-space: normal;
 }
-marquee {
+.marquee-container {
+    overflow: hidden; 
+    white-space: nowrap;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.marquee-content {
+    display: inline-flex; 
+    gap: 2em; 
     font-size: 22px;
     font-weight: 500;
     color: #6D7373;
     letter-spacing: 2%;
-    margin-top: 80px;
-    word-spacing: 1em;
-    overflow-x: hidden;
+    animation: scroll-infinite 20s linear infinite; 
 }
+
+.marquee-content img {
+    height: 1em; 
+    vertical-align: middle;
+}
+
+@keyframes scroll-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
 
 
 
@@ -232,17 +263,24 @@ marquee {
   color: #002222;
 }
 
+.design-container {
+  background-color: #02494B;
+  padding: 40px;
+   background-image: url(assets/bg-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
 .design {
-  background: #02494B;
+  
   padding: clamp(30px, 5vw, 70px);
   max-width: 1440px;
+ 
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background-image: url(assets/bg-2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom left;
+ 
+  
 }
 
 .design-inner {
@@ -296,8 +334,8 @@ marquee {
   width: 100%;
   max-width: 520px;
   background-image: url(assets/bg-img.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 70%;
+  background-repeat: repeat-y;
   background-position: center;
 }
 
@@ -320,9 +358,9 @@ marquee {
 
 .right .badge {
   position: absolute;
-  right: 3%;
-  top: -12%;
-  width: clamp(80px, 12vw, 140px);
+  right: 9%;
+  top: -11%;
+  width: clamp(8%, 12vw, 140px);
   z-index: 5;
 }
 
@@ -343,18 +381,20 @@ marquee {
 }
 
 .img1 {
-  background-position: 20% center; 
+  background-position: 10% center; 
 }
 
 .img2 {
-  background-position: 80% center;
-  height: 90%;
+  background-position: 106% bottom;
+  height: 100%;
+  clip-path: inset(10% 0 0 0)
 }
 
-
+.why-us{
+    background-color: #fafafa;
+}
 .why {
   padding: 120px 70px;
-  background-color: #fafafa;
   max-width: 1440px;
     margin: 0 auto;
 }
@@ -448,6 +488,11 @@ marquee {
   min-width: 140px;
   white-space: nowrap;
 }
+.btn-container .btn-quote:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transform: scale(1.05);
+}
 .btn-container .btn-quote img {
   padding-right: 10px;
 }
@@ -465,15 +510,23 @@ marquee {
   min-width: 140px;
   white-space: nowrap;
 }
+.btn-container .btn-contact:hover {
+    color: #dfdfdf;
+    cursor: pointer;
+    transform: scale(1.05);
+}
 
+footer{
+     background-color: #FAFAFA;
+}
 
-footer {
+.footer {
     padding: clamp(40px, 5vw, 70px) clamp(20px, 5vw, 70px);
     max-width: 1440px;
     margin: 0 auto;
-    background-color: #FAFAFA;
+   
 }
-footer .about {
+.footer .about {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -482,31 +535,31 @@ footer .about {
     gap: clamp(30px, 4vw, 40px);
     flex-wrap: wrap; 
 }
-footer .about p {
+.footer .about p {
     font-family: 'Inter', sans-serif;
     line-height: 150%;
     color: #5A5E5E;
     font-size: clamp(14px, 1.5vw, 16px);
 }
-footer .about .info {
+.footer .about .info {
     flex: 1 1 300px;
     max-width: 360px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-footer .about .social {
+.footer .about .social {
     display: flex;
     gap: 20px;
     margin-top: 10px;
 }
-footer .about .links {
+.footer .about .links {
     display: flex;
     gap: clamp(40px, 6vw, 80px);
     flex: 2 1 auto;
     flex-wrap: wrap;
 }
-footer .about .links div {
+.footer .about .links div {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -536,7 +589,7 @@ footer .about .msg a {
     gap: 10px;
     font-weight: 500;
 }
-footer .bottom {
+.footer .bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -544,13 +597,13 @@ footer .bottom {
     flex-wrap: wrap;
     gap: 20px;
 }
-footer .bottom p {
+.footer .bottom p {
     font-family: 'Inter', sans-serif;
     color: #5A5E5E;
     font-size: 16px;
     font-weight: 400;
 }
-footer .bottom .bottom-links {
+.footer .bottom .bottom-links {
     display: flex;
     gap: clamp(20px, 4vw, 40px);
     flex-wrap: wrap;
