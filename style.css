@@ -168,7 +168,7 @@ body {
     font-weight: 500;
     color: #6D7373;
     letter-spacing: 2%;
-    animation: scroll-infinite  15s  infinite linear; 
+    animation: scroll-infinite  10s  infinite linear; 
 }
 
 .marquee-content img {
