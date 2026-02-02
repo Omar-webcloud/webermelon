@@ -20,7 +20,7 @@ body {
   flex-wrap: nowrap;
 }
 .logo img {
-    max-width: 100%;
+    max-width: 70px;
     width: clamp(100px, 15vw, 150px);
     height: auto;
 }
@@ -374,7 +374,7 @@ body {
 .left h1 {
   font-size: clamp(24px, 4vw, 56px);
   line-height: 1.15;
-  margin: 0 0 24px 0;
+  margin: 0 0 32px 0;
   font-weight: 500;
 }
 
@@ -395,7 +395,7 @@ body {
   padding-bottom: 4px;
   display: inline-flex;
   align-items: center;
-  margin-bottom: 48px;
+  margin-bottom: 95px;
   font-family: 'Inter', sans-serif;
 }
 
@@ -403,20 +403,27 @@ body {
   background: #fff;
   color: #00494A;
   display: flex;
-  justify-content: space-around;
-  padding: clamp(15px, 2vw, 30px);
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
   width: 100%;
-  max-width: 520px;
-  background-image: url(assets/bg-img.png);
-  background-size: 100%;
+  max-width: 640px;
+  background-image: url(assets/bg-img.svg) ,url(assets/bg-img-2.svg);
+  background-size: 100%, contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top, bottom;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
 }
 
 .stat span {
   font-size: clamp(12px, 1.5vw, 18px);
   display: block;
   margin-bottom: 10px;
+  
 }
 
 .stat h3 {
@@ -432,9 +439,9 @@ body {
 
 .right .badge {
   position: absolute;
-  right: 9%;
+  right: 5%;
   top: -11%;
-  width: clamp(8%, 12vw, 140px);
+  width: 30%;
   z-index: 5;
 }
 
@@ -455,13 +462,13 @@ body {
 }
 
 .img1 {
-  background-position: 10% center; 
+  background-position: 3% center; 
 }
 
 .img2 {
   background-position: 106% bottom;
   height: 100%;
-  clip-path: inset(10% 0 0 0)
+  clip-path: inset(18% 0 0 0)
 }
 
 .why-us{
@@ -485,7 +492,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  margin-bottom: 140px;
 }
 
 .services .service-box {
@@ -493,7 +499,7 @@ body {
 }
 
 .service-box h3 {
-  padding: 40px;
+  padding: 10px;
   color: #303635;
   font-size: 24px;
   font-weight: 500;
@@ -595,18 +601,18 @@ footer{
 }
 
 .footer {
-    padding: clamp(40px, 5vw, 70px) clamp(20px, 5vw, 70px);
+    padding: 70px 70px 20px 70px;
     max-width: 1440px;
     margin: 0 auto;
    
 }
 .footer .about {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: start;
+    align-items: center;
     margin-bottom: 20px;
     width: 100%;
-    gap: clamp(30px, 4vw, 40px);
+    gap: clamp(10%, 4vw, 40px);
     flex-wrap: wrap; 
 }
 .footer .about p {
@@ -638,6 +644,10 @@ footer{
     flex-direction: column;
     gap: 15px;
     min-width: 120px;
+}
+.footer .about .links div p{
+    padding: 5px;
+    margin: 0;
 }
 footer .about .msg {
     flex: 1 1 250px; 
