@@ -43,8 +43,8 @@ body {
   align-items: center;
 }
 .quickxs img {
-    width: clamp(18px, 3vw, 24px);
-    height: auto;
+    width: 24px;
+    height: 24px;
 }
 .quickxs img:hover {
     cursor: pointer;
