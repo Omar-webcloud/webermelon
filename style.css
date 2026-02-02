@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roslindale";
-  src: url("/font/Roslindale-DisplayMedium-Testing.ttf") format("truetype");
+  src: url("./font/Roslindale-DisplayMedium-Testing.ttf") format("truetype");
 }
 * {
   padding: 0;
