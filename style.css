@@ -390,7 +390,7 @@ body {
 .design-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   gap: clamp(20px, 4vw, 50px);
 }
 
