@@ -98,3 +98,39 @@ const productData = [
   }
 ];
 
+
+
+
+
+
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const stats = document.querySelectorAll(".stat h3");
+
+  stats.forEach((stat) => {
+    const target = parseInt(stat.innerText);
+    const load = stat.innerText.replace(/[0-9]/g, "");
+    const duration = 2000;
+    const frameRate = 1000 / 60;
+    const totalFrames = Math.round(duration / frameRate);
+    let currentFrame = 0;
+
+    const animate = () => {
+      currentFrame++;
+      const progress = currentFrame / totalFrames;
+      const currentValue = Math.round(target * progress);
+
+      stat.innerText = currentValue + load;
+
+      if (currentFrame < totalFrames) {
+        requestAnimationFrame(animate);
+      } else {
+        stat.innerText = target + load;
+      }
+    };
+
+    animate();
+  });
+});
