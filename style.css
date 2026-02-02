@@ -269,14 +269,15 @@ body {
   text-align: center;
 }
 .popular .collection-tag {
-    max-width: 500px;
+    max-width: 480px;
     display: flex;
     color: #414141;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto 80px;
     gap: 40px;
     border-bottom: 1px solid #E5E5E5;
+    
 }
 .collection-tag p {
     padding-bottom: 10px;
