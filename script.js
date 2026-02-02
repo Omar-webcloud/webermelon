@@ -16,8 +16,7 @@ if (scrollContainer && slider) {
     const sliderWidth = slider.offsetWidth;
     const trackWidth = containerWidth / 4;
 
-    
-    const maxTranslate = 100; 
+    const maxTranslate = 100;
 
     const translateX = scrollRatio * maxTranslate * 2 - maxTranslate;
     slider.style.transform = `translateX(${translateX}px)`;
@@ -48,7 +47,7 @@ if (scrollContainer && slider) {
   window.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
 
-    const maxTranslate = 100; 
+    const maxTranslate = 100;
     const deltaX = e.pageX - startX;
     let newTranslateX = initialSliderLeft + deltaX;
 
@@ -62,7 +61,7 @@ if (scrollContainer && slider) {
     scrollContainer.scrollLeft = ratio * maxScroll;
   });
 
-  updateSliderPosition(); 
+  updateSliderPosition();
 }
 
 const toggler = document.querySelector(".nav-toggler");
@@ -96,6 +95,17 @@ tabs.forEach((tab) => {
 
 const tags = document.querySelectorAll(".collection-tag p");
 const products = document.querySelectorAll(".product-card");
+const seeAllBtn = document.getElementById("see-all-btn");
+
+if (seeAllBtn) {
+  seeAllBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    products.forEach((product) => {
+      product.style.display = "block";
+    });
+    tags.forEach((t) => t.classList.remove("active"));
+  });
+}
 
 tags.forEach((tag) => {
   tag.addEventListener("click", () => {
