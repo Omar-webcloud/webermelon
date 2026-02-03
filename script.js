@@ -22,7 +22,7 @@ if (scrollContainer) {
 
 const swiper = new Swiper(".horizontal-scroll", {
   slidesPerView: 4,
-  spaceBetween: 0,
+  spaceBetween: 10,
   loop: true,
   speed: 600,
   freeMode: true,
@@ -32,7 +32,27 @@ const swiper = new Swiper(".horizontal-scroll", {
   navigation: {
     nextEl: ".rightClick",
     prevEl: ".leftClick"
-  }
+  },
+  breakpoints: {
+    
+    200: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+  
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 10
+    }}
 });
 
 
