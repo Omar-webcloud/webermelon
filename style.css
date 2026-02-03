@@ -435,6 +435,7 @@ body {
 
 .left p {
   font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: 300;
   line-height: 1.6;
   margin-bottom: 24px;
   opacity: .9;
@@ -478,6 +479,7 @@ body {
   font-size: clamp(12px, 1.5vw, 18px);
   display: block;
   margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
   
 }
 
@@ -486,6 +488,7 @@ body {
   margin: 0;
   font-weight: 500;
 }
+
 
 .right {
   width: 50%;
