@@ -1,68 +1,12 @@
 const scrollContainer = document.querySelector(".horizontal-scroll");
-const slider = document.querySelector(".silder");
-
-if (scrollContainer && slider) {
-  let isDragging = false;
-  let startX;
-  let initialSliderLeft;
-
-  const updateSliderPosition = () => {
-    if (isDragging) return;
-    const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-    const scrollRatio = scrollContainer.scrollLeft / maxScroll;
-
-    const containerWidth =
-      document.querySelector(".product-scroll").clientWidth;
-    const sliderWidth = slider.offsetWidth;
-    const trackWidth = containerWidth / 4;
-
-    const maxTranslate = 100;
-
-    const translateX = scrollRatio * maxTranslate * 2 - maxTranslate;
-    slider.style.transform = `translateX(${translateX}px)`;
-  };
-
-  scrollContainer.addEventListener("scroll", updateSliderPosition);
-  window.addEventListener("resize", updateSliderPosition);
-
-  slider.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    slider.style.cursor = "grabbing";
-    startX = e.pageX;
-
-    const style = window.getComputedStyle(slider);
-    const matrix = new DOMMatrix(style.transform);
-    initialSliderLeft = matrix.m41;
-
-    e.preventDefault();
+if (scrollContainer) {
+  scrollContainer.addEventListener("wheel", (event) => {
+    event.preventDefault();
+    scrollContainer.scrollLeft += event.deltaY;
   });
-
-  window.addEventListener("mouseup", () => {
-    if (isDragging) {
-      isDragging = false;
-      slider.style.cursor = "grab";
-    }
-  });
-
-  window.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
-
-    const maxTranslate = 100;
-    const deltaX = e.pageX - startX;
-    let newTranslateX = initialSliderLeft + deltaX;
-
-    if (newTranslateX < -maxTranslate) newTranslateX = -maxTranslate;
-    if (newTranslateX > maxTranslate) newTranslateX = maxTranslate;
-
-    slider.style.transform = `translateX(${newTranslateX}px)`;
-
-    const ratio = (newTranslateX + maxTranslate) / (maxTranslate * 2);
-    const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-    scrollContainer.scrollLeft = ratio * maxScroll;
-  });
-
-  updateSliderPosition();
 }
+
+
 
 const toggler = document.querySelector(".nav-toggler");
 const sideMenu = document.querySelector(".side-menu");
