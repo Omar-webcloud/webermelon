@@ -17,6 +17,8 @@ header{
   max-width: 1440px;
   margin: 0 auto;
   padding-top: 24px;
+  padding-right: 70px;
+  padding-left: 70px;
   display: flex;
   justify-content:space-between;
   align-items: center;
@@ -376,7 +378,7 @@ html {
     background: none;
 }
 
-.horizontal-scroll{
+.product-scroll{
     max-width: 1440px;
     padding: 0 5%;
     margin: 0 auto 8%;
