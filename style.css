@@ -150,14 +150,14 @@ body {
 }
 .img-grid h3 {
     font-weight: 400;
-    font-size: clamp(12px, 1.5vw, 18px);
+    font-size: 20px;
     white-space: normal;
 }
 
 .img-grid {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     gap: 2%;
     max-width: 1440px;
     margin: 0 auto;
