@@ -483,6 +483,7 @@ header{
   background: #fff;
   color: #00494A;
   display: flex;
+  gap: 90px;
   justify-content: center;
   align-items: center;
   padding: 60px 40px;
@@ -495,16 +496,19 @@ header{
 }
 
 .stat {
+  display: flex;
   flex: 1;
   text-align: center;
+  flex-direction: column;
+  gap: 24px;
+  
 }
 
 .stat span {
-  font-size: clamp(12px, 1.5vw, 18px);
   display: block;
   margin-bottom: 10px;
   font-family: 'Inter', sans-serif;
-  
+  font-size: 24px;
 }
 
 .stat h3 {
