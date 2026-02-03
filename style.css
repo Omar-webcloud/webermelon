@@ -478,6 +478,9 @@ header{
   margin-bottom: 95px;
   font-family: 'Inter', sans-serif;
 }
+.link-arrow img{
+ vertical-align: middle;
+}
 
 .stats {
   background: #fff;
