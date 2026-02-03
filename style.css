@@ -203,6 +203,8 @@ body {
 .marquee-content {
     display: flex;
     gap: 2em;
+    align-items: center;
+    justify-content: center;
     padding-right: 2em;
     font-size: 22px;
     font-weight: 500;
@@ -216,7 +218,7 @@ body {
 .marquee-content img {
     height:70%; 
     padding-right: 10%;
-    vertical-align: center;
+    vertical-align: middle;
 }
 
 @keyframes scroll-infinite {
