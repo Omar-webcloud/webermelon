@@ -16,7 +16,7 @@ header{
 .nav-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 20px 5% 0px;
+  padding: 20px 5% 10px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,14 +132,15 @@ header{
     background-image: url('assets/banner-bg.svg');
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position:top center;
+    background-position: center;
     background-color: #FAFAFA;
-}
+    
+ }
 .banner-text {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    
 }
 .banner h1 {
     font-size: clamp(32px, 5vw, 64px);
@@ -163,11 +164,12 @@ header{
 .img-grid {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 2%;
+    align-items: flex-end;
+    gap: 6%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0;
+    
 }
 .img-grid .desk, .img-grid .tulip {
     width: 25%;
@@ -176,14 +178,17 @@ header{
 }
 .img-grid .main-img {
     width: 46%;
-    margin-bottom: -1.5%;
+    height: 100%;
+    margin-bottom: 0;
     position: relative;
     z-index: 1;
+    
+    
 }
 .img-grid img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 600;
+    
+    
 }
 .img-grid .badge {
     position: absolute;
@@ -191,7 +196,7 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35%;
-    max-width: 190px;
+    max-width: 222px;
 }
 
 
@@ -239,18 +244,21 @@ header{
 
 
 
+
 .slide {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 5px;
     color: #303635;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin-bottom: 25px;
 }
 .slide img {
    width: 24px;
    height: 24px;
+   margin-top: 18px;
 }
 .line {
     width: 100%;
