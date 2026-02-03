@@ -1,3 +1,5 @@
+// scroll
+
 const scrollContainer = document.querySelector(".horizontal-scroll");
 
 if (scrollContainer) {
@@ -16,7 +18,7 @@ if (scrollContainer) {
   }, { passive: false });
 }
 
-
+// left right click
 const leftClick = document.querySelector(".leftClick");
 const rightClick = document.querySelector(".rightClick");
 
@@ -34,7 +36,7 @@ if (rightClick) {
 
 
 
-
+//menu
 
 const toggler = document.querySelector(".nav-toggler");
 const sideMenu = document.querySelector(".side-menu");
@@ -64,6 +66,8 @@ tabs.forEach((tab) => {
     tab.classList.add("active");
   });
 });
+
+// product filter
 
 const tags = document.querySelectorAll(".collection-tag p");
 const products = document.querySelectorAll(".product-card");
@@ -96,6 +100,10 @@ tags.forEach((tag) => {
     });
   });
 });
+
+
+
+// count
 
 window.addEventListener("DOMContentLoaded", () => {
   const stats = document.querySelectorAll(".stat h3");
