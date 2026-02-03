@@ -266,17 +266,24 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
     left: 0;
     right: 0;
     top:30%;
     top:30%;
     z-index: 100;
-    cursor: grab;
+   
+   
 }
-.silder span{
+.leftClick, .rightClick{
+    cursor: pointer;
     padding: 5px;
+    font-size: 28px;
+    border: none;
+    background: none;
 }
+
+
 .horizontal-scroll {
     max-width: 1440px;
     padding: 0 5% ;

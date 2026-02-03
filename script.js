@@ -1,10 +1,38 @@
 const scrollContainer = document.querySelector(".horizontal-scroll");
+
 if (scrollContainer) {
   scrollContainer.addEventListener("wheel", (event) => {
+    const atStart = scrollContainer.scrollLeft === 0;
+    const atEnd =
+      scrollContainer.scrollLeft + scrollContainer.clientWidth >=
+      scrollContainer.scrollWidth;
+
+    if ((event.deltaY < 0 && atStart) || (event.deltaY > 0 && atEnd)) {
+      return;
+    }
+
     event.preventDefault();
     scrollContainer.scrollLeft += event.deltaY;
-  });
+  }, { passive: false });
 }
+
+
+const leftClick = document.querySelector(".leftClick");
+const rightClick = document.querySelector(".rightClick");
+
+if (leftClick) {
+  leftClick.addEventListener("click", () => {
+    scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+  });
+} 
+
+if (rightClick) {
+  rightClick.addEventListener("click", () => {
+    scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
+  }); 
+}
+
+
 
 
 
