@@ -18,21 +18,23 @@ if (scrollContainer) {
   }, { passive: false });
 }
 
-// left right click
-const leftClick = document.querySelector(".leftClick");
-const rightClick = document.querySelector(".rightClick");
+// infinite slide
 
-if (leftClick) {
-  leftClick.addEventListener("click", () => {
-    scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
-  });
-} 
+const swiper = new Swiper(".horizontal-scroll", {
+  slidesPerView: 4,
+  spaceBetween: 0,
+  loop: true,
+  speed: 600,
+  freeMode: true,
+  mousewheel: {
+    forceToAxis: true
+  },
+  navigation: {
+    nextEl: ".rightClick",
+    prevEl: ".leftClick"
+  }
+});
 
-if (rightClick) {
-  rightClick.addEventListener("click", () => {
-    scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
-  }); 
-}
 
 
 

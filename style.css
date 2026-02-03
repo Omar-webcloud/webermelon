@@ -250,9 +250,12 @@ body {
     background-color: #9C9E9E;
     margin-bottom: 6%;
 }
+
+
 .product-scroll{
     position: relative;
 }
+
 .silder{
     background-color: #FAFAFA;
     color:#303635;
@@ -269,13 +272,11 @@ body {
     margin: 0 auto;
     left: 0;
     right: 0;
-    top:30%;
-    top:30%;
-    z-index: 100;
-   
-   
+    top: 30%;
+    z-index: 10;
 }
-.leftClick, .rightClick{
+
+.leftClick,.rightClick{
     cursor: pointer;
     padding: 12px;
     font-size: 28px;
@@ -283,21 +284,25 @@ body {
     background: none;
 }
 
-
-.horizontal-scroll {
+.horizontal-scroll{
     max-width: 1440px;
-    padding: 0 5% ;
-    display: flex;
-    gap: 3%;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    white-space: nowrap;
-    scrollbar-width: none;
+    padding: 0 5%;
     margin: 0 auto 8%;
 }
-.horizontal-scroll::-webkit-scrollbar {
-    display: none;
+
+.swiper-slide{
+    width: auto;
+} 
+
+ .swiper-slide img{
+    display: flex;
+    max-width: 100%;
+   
 }
+
+
+
+
 .popular {
   padding: 0 70px;
   max-width: 1440px;
