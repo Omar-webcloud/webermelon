@@ -108,7 +108,7 @@ tags.forEach((tag) => {
 window.addEventListener("DOMContentLoaded", () => {
   const stats = document.querySelectorAll(".stat h3");
 
-  stats.forEach((stat) => {
+  const animateCount = (stat) => {
     const target = parseInt(stat.innerText);
     const load = stat.innerText.replace(/[0-9]/g, "");
     const duration = 2000;
@@ -131,5 +131,23 @@ window.addEventListener("DOMContentLoaded", () => {
     };
 
     animate();
+  };
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          observer.unobserve(entry.target); 
+        }
+      });
+    },
+    {
+      threshold: 0.5, 
+    }
+  );
+
+  stats.forEach((stat) => {
+    observer.observe(stat);
   });
 });
