@@ -292,7 +292,10 @@ body {
     margin: 0 auto 8%;
    
 }
-
+.horizontal-scroll img{
+    width: 345px;
+    height: auto;
+}
 .swiper-slide{
     width: auto;
 } 
