@@ -16,9 +16,9 @@ header{
 .nav-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 20px 5% 10px 0px;
+  padding-top: 24px;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
   flex-wrap: nowrap;
   background-color: #FAFAFA;
@@ -42,8 +42,8 @@ header{
 }
 .quickxs {
   display: flex;
-  gap: clamp(10px, 2.5vw, 24px);
-  justify-content: end;
+  gap: 24px;
+  justify-content: flex-end;
   align-items: center;
 }
 .quickxs img {
