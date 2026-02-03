@@ -36,8 +36,8 @@ const swiper = new Swiper(".horizontal-scroll", {
   breakpoints: {
     
     200: {
-      slidesPerView: 1,
-      spaceBetween: 0
+      slidesPerView: 2,
+      spaceBetween: 1
     },
     480: {
       slidesPerView: 2,

@@ -298,6 +298,7 @@ body {
  .swiper-slide img{
     display: flex;
     max-width: 100%;
+    padding: 5px;
    
 }
 
