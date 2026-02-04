@@ -1,22 +1,3 @@
-// scroll
-
-const scrollContainer = document.querySelector(".horizontal-scroll");
-
-if (scrollContainer) {
-  scrollContainer.addEventListener("wheel", (event) => {
-    const atStart = scrollContainer.scrollLeft === 0;
-    const atEnd =
-      scrollContainer.scrollLeft + scrollContainer.clientWidth >=
-      scrollContainer.scrollWidth;
-
-    if ((event.deltaY < 0 && atStart) || (event.deltaY > 0 && atEnd)) {
-      return;
-    }
-
-    event.preventDefault();
-    scrollContainer.scrollLeft += event.deltaY;
-  }, { passive: false });
-}
 
 // infinite slide
 
@@ -27,36 +8,35 @@ const swiper = new Swiper(".horizontal-scroll", {
   speed: 600,
   freeMode: true,
   mousewheel: {
-    forceToAxis: true
+    forceToAxis: false,
+    sensitivity: 1,
+    releaseOnEdges: false,
   },
   navigation: {
     nextEl: ".rightClick",
-    prevEl: ".leftClick"
+    prevEl: ".leftClick",
   },
   breakpoints: {
-    
     200: {
       slidesPerView: 2,
-      spaceBetween: 1
+      spaceBetween: 1,
     },
     480: {
       slidesPerView: 2,
-      spaceBetween: 10
+      spaceBetween: 10,
     },
-    
+
     640: {
       slidesPerView: 3,
-      spaceBetween: 10
+      spaceBetween: 10,
     },
-  
+
     1024: {
       slidesPerView: 4,
-      spaceBetween: 10
-    }}
+      spaceBetween: 10,
+    },
+  },
 });
-
-
-
 
 //menu
 
@@ -123,8 +103,6 @@ tags.forEach((tag) => {
   });
 });
 
-
-
 // count
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -160,13 +138,13 @@ window.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           animateCount(entry.target);
-          observer.unobserve(entry.target); 
+          observer.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.5, 
-    }
+      threshold: 0.5,
+    },
   );
 
   stats.forEach((stat) => {
