@@ -446,7 +446,8 @@ html {
   text-align: center;
 }
 .popular .collection-tag {
-    max-width: 420px;
+    max-width: 426px;
+    height: 40px;
     display: flex;
     color: #414141;
     text-align: center;
