@@ -505,6 +505,7 @@ html {
   display: flex;
   gap: 10px;
   font-size: 18px;
+  font-family:'Inter', sans-serif; 
 }
 .see-all a:hover {
   cursor: pointer;
