@@ -737,17 +737,18 @@ html {
 }
 
 .instant-container h2 {
-  font-size: clamp(28px, 3.5vw, 48px);
-  font-weight: 500;
+  font-size: 56px;
+  font-weight: 600;
   color: #ffffff;
   margin-bottom: clamp(20px, 2vw, 30px);
+  width: 698px;
 }
 .instant-container p {
   font-family: "Inter", sans-serif;
   color: #d1e2e2;
   margin-bottom: clamp(30px, 3.5vw, 50px);
   line-height: 150%;
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-size: 20px;
 }
 
 .instant-container .btn-container {
@@ -772,7 +773,8 @@ html {
   justify-content: center;
   align-items: center;
   flex: 1;
-  min-width: 140px;
+  max-width: 174px;
+  height: 56px;
   white-space: nowrap;
 }
 .btn-container .btn-quote:hover {
@@ -794,7 +796,8 @@ html {
   text-decoration: none;
   font-weight: 400;
   flex: 1;
-  min-width: 140px;
+  height: 54px;
+  max-width: 229px;
   white-space: nowrap;
 }
 .btn-container .btn-contact:hover {
