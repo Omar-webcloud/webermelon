@@ -1,6 +1,12 @@
 @font-face {
   font-family: "Roslindale";
   src: url("font/Roslindale-DisplayMedium-Testing.ttf") format("truetype");
+
+ 
+}
+@font-face {
+  font-family: "Roslindale-DeckNarrow";
+  src: url(font/Roslindale-DeckNarrowMedium-Testing.ttf);
 }
 * {
   padding: 0;
@@ -16,6 +22,7 @@ header{
 }
 .nav-container {
   max-width: 1440px;
+  height: 52px;
   margin: 0 auto;
   padding-top: 24px;
   padding-right: 70px;
@@ -32,8 +39,8 @@ header{
     height: auto;
 }
 .nav-toggler img {
-     width: clamp(90%, 4vw, 32px);
-     height: auto;
+     width: 52px;
+     height: 52px;
 }
 .nav-toggler img:hover {
     cursor: pointer;
@@ -167,9 +174,9 @@ html {
 .hero__heading {
   height: 16.6rem;
   font-size: 7.4rem;
-  line-height: 1.1;
+  line-height: 120%;
   text-align: center;
-  font-family: "Roslindale Display", serif;
+  font-family:"Roslindale-DeckNarrow", serif;
   color: #303635;
   font-weight: 500;
 }
@@ -260,8 +267,8 @@ html {
 
 .product__logo {
   position: absolute;
-  width: 210px;
-  height: 188px;
+  width: 222px;
+  height: 198px;
   top: 18.5%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -307,7 +314,7 @@ html {
 }
 
 .marquee-content img {
-    height:70%; 
+   width: 50px; 
     padding-right: 10%;
     vertical-align: middle;
 }
