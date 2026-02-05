@@ -499,6 +499,7 @@ html {
   margin-bottom: 130px;
 }
 .see-all a {
+  font-family:'Inter', sans-serif; 
   text-decoration: underline;
   color: #00494a;
   display: flex;
