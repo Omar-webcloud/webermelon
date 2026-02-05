@@ -396,8 +396,9 @@ html {
 }
 
 .swiper-slide{
-    width: auto;
+    width: 308px;
     position: relative;
+
 } 
  .swiper-slide .text-box{
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(70, 77, 77, 0.54) 47.86%, rgba(59, 66, 66, 0.769218) 98.68%, #000909 120.11%);
@@ -408,7 +409,10 @@ html {
   font-size: 26px;
   font-weight: 300;
   color: #FFFFFF;
-  width: 295px;
+  width: calc(100% - 10px);
+  left: 5px;
+
+
   height: 119px;
   padding-top: 71px;
   padding-left:16px ;
