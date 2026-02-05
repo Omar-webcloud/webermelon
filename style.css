@@ -260,8 +260,8 @@ html {
 
 .product__logo {
   position: absolute;
-  width: 14.233rem;
-  height: 12.825rem;
+  width: 210px;
+  height: 188px;
   top: 18.5%;
   left: 50%;
   transform: translate(-50%, -50%);
