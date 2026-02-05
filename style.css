@@ -560,10 +560,10 @@ html {
 }
 
 .left h1 {
-  font-size: clamp(24px, 4vw, 56px);
+  font-size: 56px;
   line-height: 1.15;
   margin: 0 0 32px 0;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .left p {
@@ -573,7 +573,7 @@ html {
   margin-bottom: 24px;
   opacity: .9;
   font-family: 'Inter', sans-serif;
-  max-width: 450px;
+  max-width: 545px;
 }
 
 .read-more {
@@ -614,6 +614,8 @@ html {
   text-align: center;
   flex-direction: column;
   gap: 24px;
+  width: 102px;
+  height: 102px;
   
 }
 
@@ -625,9 +627,9 @@ html {
 }
 
 .stat h3 {
-  font-size: clamp(20px, 2.5vw, 36px);
+  font-size: 40px;
   margin: 0;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 
@@ -648,6 +650,7 @@ html {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: clamp(10px, 1.5vw, 20px);
+  max-width:608px ;
   height: auto;
   aspect-ratio: 520 / 520;
   align-items: end;
@@ -661,7 +664,7 @@ html {
 }
 
 .img1 {
-  background-position: 3% center; 
+  background-position: 2% center; 
 }
 
 .img2 {
@@ -929,6 +932,7 @@ footer .about .msg a:hover {
     .services { grid-template-columns: repeat(2, 1fr); }
     .silder {width: 100px ; height: 100px; font-size: 16px; }
     .products { grid-template-columns: repeat(2, 1fr); }
+    
 }
 
 @media screen and (max-width: 768px) {
