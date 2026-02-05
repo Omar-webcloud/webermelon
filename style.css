@@ -4,11 +4,12 @@
 }
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: "Roslindale", sans-serif;
 }
 body {
-  margin: 0 auto;
+  
 }
 header{
   background-color: #FAFAFA;
@@ -421,7 +422,7 @@ html {
     color: #414141;
     text-align: center;
     justify-content:space-between;
-    margin: 0 auto 80px;
+    margin: 0 auto 50px;
     gap: 44px;
     border-bottom: 1px solid #E5E5E5;
     
@@ -449,13 +450,14 @@ html {
 }
 .product-card {
     transition: transform 0.3s ease;
+    margin-bottom: 20px ;
 }
 .product-card:hover {
     transform: scale(1.05);
 }
 .product-card img {
   width: 100%;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
 }
 .product-card h3 {
   font-size: 24px;
@@ -464,7 +466,10 @@ html {
 }
 .product-card .price {
   color: #888888;
-  margin-top: 14px;
+  margin-top: 15px;
+  
+}
+.price{font-size: 20px;
 }
 .see-all {
   display: flex;
@@ -479,6 +484,7 @@ html {
   color: #00494a;
   display: flex;
   gap: 10px;
+  font-size: 18px;
 }
 .see-all a:hover {
   cursor: pointer;
@@ -487,7 +493,7 @@ html {
 
 .design-container {
   background-color: #02494B;
-  padding: 40px;
+  padding: 40px 40px 80px 40px;
    background-image: url(assets/bg-2.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -869,6 +875,8 @@ footer .about .msg a:hover {
     .nav-container { padding: 20px 40px; }
     .banner { padding: 5%; }
     .products { gap: 30px; }
+    .stats{gap: 10px;}
+    .stats span{ padding: 0; margin:0px;}
     .left h1 { font-size: 48px; }
 }
 
@@ -899,6 +907,7 @@ footer .about .msg a:hover {
     }
     .design{ padding: 0;
              margin: 0; }
+             .stats{gap: 0px; ;}
     .left{width:60%;
     align-items: center;
     text-align: center;
