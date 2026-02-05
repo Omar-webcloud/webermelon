@@ -840,13 +840,20 @@ footer{
     gap: 20px;
     font-size:18px;
 }
+.info p{
+  max-width: 363px;
+  max-height: 84px;
+}
 .footer .about .social {
     display: flex;
-    gap: 20px;
+    gap: 23.95px;
     margin-top: 25px;
+    vertical-align: bottom;
+    
 }
-.fa-brands fa-instagram{
-  background-color: black;
+.social img, .social i{
+  width: 18px;
+  
 }
 .footer .about .links {
     display: flex;
@@ -861,8 +868,9 @@ footer{
     min-width: 120px;
 }
 .footer .about .links div p{
-    padding: 5px;
     margin: 0;
+    font-size:18px;
+    max-width: 95px;
 }
 footer .about .msg {
     flex: 1 1 250px; 
@@ -882,14 +890,20 @@ footer .about .msg h2 {
 footer .about .msg a {
     color: #FFF;
     background-color: #00494A;
-    padding: 12px 24px;
+   
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
     font-size: 16px;
-    font-weight: 400;
     font-family:  "Inter", sans-serif;
+    width: 174px;
+    height: 56px;
+    gap: 10px;
+    padding-top: 12px;
+    padding-right: 36px;
+    padding-bottom: 12px;
+    padding-left: 36px;
+
 }
 footer .about .msg a:hover {
     background-color: #003737;
@@ -907,7 +921,7 @@ footer .about .msg a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 16px;
     flex-wrap: wrap;
     gap: 20px;
 }
