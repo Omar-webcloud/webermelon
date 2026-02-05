@@ -686,7 +686,7 @@ html {
   font-size: 48px;
   font-weight: 500;
   color: #303635;
-  margin-bottom: 80px;
+  margin-bottom: 88px;
   text-align: center;
 }
 
@@ -698,6 +698,8 @@ html {
 
 .services .service-box {
   text-align: center;
+  width: 350px;
+  height: 290px;
 }
 
 .service-box h3 {
