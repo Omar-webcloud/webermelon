@@ -490,7 +490,7 @@ html {
   margin-bottom: 20px;
 }
 .product-card h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   color: #303635;
 }
@@ -499,7 +499,8 @@ html {
   margin-top: 15px;
   
 }
-.price{font-size: 20px;
+.price{
+  font-size: 20px;
   font-weight: 300;
 }
 .see-all {
