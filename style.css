@@ -6,7 +6,12 @@
 }
 @font-face {
   font-family: "Roslindale-DeckNarrow";
-  src: url(font/Roslindale-DeckNarrowMedium-Testing.ttf);
+  src: url(font/Roslindale-DeckNarrowMedium-Testing.ttf) format("truetype");
+}
+@font-face {
+  font-family:"Roslindale-DeckNarrow-semibold";
+  src: url(font/Roslindale-DeckNarrowSemiBold-Testing.ttf) format("truetype"); 
+
 }
 * {
   padding: 0;
@@ -744,6 +749,7 @@ html {
 
 .instant-container h2 {
   font-size: 56px;
+  font-family:"Roslindale-DeckNarrow-semibold", serif;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: clamp(20px, 2vw, 30px);
