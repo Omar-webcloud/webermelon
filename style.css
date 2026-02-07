@@ -13,6 +13,11 @@
   src: url(font/Roslindale-DeckNarrowSemiBold-Testing.ttf) format("truetype"); 
 
 }
+@font-face {
+  font-family:"Roslindale-bold";
+  src: url(font/Roslindale-TextBold-Testing.ttf) format("truetype"); 
+
+}
 * {
   padding: 0;
   margin: 0;
@@ -567,6 +572,7 @@ html {
 
 .left h1 {
   font-size: 56px;
+  font-family: "Roslindale-bold" , sans-serif;
   line-height: 1.15;
   margin: 0 0 32px 0;
   font-weight: 700;
