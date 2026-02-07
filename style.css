@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roslindale";
-  src: url("font/Roslindale-DisplayMedium-Testing.ttf") format("truetype");
+  src: url("font/Roslindale-TextRegular-Testing.ttf") format("truetype");
 
  
 }
@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family:"Roslindale-DeckNarrow-semibold";
-  src: url(font/Roslindale-DeckNarrowSemiBold-Testing.ttf) format("truetype"); 
+  src: url(font/Roslindale-TextSemiBold-Testing.ttf) format("truetype"); 
 
 }
 @font-face {
@@ -501,6 +501,7 @@ html {
   margin-bottom: 20px;
 }
 .product-card h3 {
+  font-family:"Roslindale-bold", sans-serif ;
   font-size: 20px;
   font-weight: 500;
   color: #303635;
