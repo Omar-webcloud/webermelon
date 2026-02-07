@@ -611,7 +611,9 @@ html {
 }
 
 .left {
-  width: 45%;
+ 
+  max-width: 638px;
+   width: 100%;
   color: #fff;
   z-index: 2;
   flex-shrink: 0;
@@ -1047,6 +1049,12 @@ footer .about .msg a:hover {
   display: flex;
   gap: 76px;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1400px) {
+.left{
+  width: 45%;
+}
 }
 
 @media screen and (max-width: 1200px) {
