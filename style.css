@@ -1152,8 +1152,14 @@ footer .about .msg a:hover {
   }
 
   .stats {
-    gap: 0px;
-    max-height: 280px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    max-height: none;
+    margin: 0 auto 40px;
+    padding: 40px 20px;
+    gap: 20px;
   }
 
   .left {
