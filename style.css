@@ -1387,7 +1387,7 @@ footer .about .msg a:hover {
 
 @media (max-width: 512px) {
   .hero__product-card {
-    flex: 1;
+    flex: 0 0 50%;
     width: 100%;
     margin: 0;
   }
