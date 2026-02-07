@@ -807,8 +807,8 @@ html {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:
     bottom,
-    top left,
-    bottom right;
+    5% 20%,
+    95% 95%;
 }
 
 .instant-container h2 {
@@ -1037,7 +1037,7 @@ footer .about .msg a:hover {
 
 .footer .bottom .bottom-links {
   display: flex;
-  gap:76px;
+  gap: 76px;
   flex-wrap: wrap;
 }
 
