@@ -641,8 +641,8 @@ html {
 
 .right .badge {
   position: absolute;
-  right: 5%;
-  top: -11%;
+  right: 8%;
+  top: -12%;
   width: 30%;
   z-index: 5;
 }
