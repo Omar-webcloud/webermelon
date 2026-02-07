@@ -642,9 +642,9 @@ html {
 .read-more {
   color: #fff;
   text-decoration: none;
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-size: 18px;
   border-bottom: 1px solid #fff;
-  padding-bottom: 4px;
+  
   display: inline-flex;
   align-items: center;
 
@@ -654,6 +654,7 @@ html {
 .link-arrow img {
   vertical-align: middle;
   padding-left: 5px;
+  
 }
 
 .stats {
