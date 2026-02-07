@@ -975,6 +975,7 @@ footer .about .msg a:hover {
 }
 
 @media screen and (max-width: 992px) {
+    
     .hero__heading{font-size: 6.4rem;}
     .nav-container { gap: 20px; }
     .services { grid-template-columns: repeat(2, 1fr); }
@@ -1138,7 +1139,7 @@ footer .about .msg a:hover {
   .hero__product-card {
     flex: 0 1 23rem;
   }
-  .product__logo{width: 100%; height: auto;}
+  .product__logo{width: 15rem; height: auto;}
 }
 
 
