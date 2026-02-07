@@ -640,6 +640,12 @@ html {
   max-width: 545px;
 }
 
+.link-arrow{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .read-more {
   color: #fff;
   text-decoration: none;
@@ -654,7 +660,7 @@ html {
 
 .link-arrow img {
   vertical-align: middle;
-  padding-left: 5px;
+ 
   
 }
 
