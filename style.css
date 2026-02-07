@@ -1,8 +1,12 @@
 @font-face {
   font-family: "Roslindale";
-  src: url("font/Roslindale-TextRegular-Testing.ttf") format("truetype");
+  src: url(font/Roslindale-TextRegular-Testing.ttf) format("truetype");
 
  
+}
+@font-face {
+  font-family: "Roslindale-display-medium";
+  src: url(font/Roslindale-DisplayMedium-Testing.ttf) format("truetype");
 }
 @font-face {
   font-family: "Roslindale-DeckNarrow";
@@ -450,6 +454,7 @@ html {
   margin: 0 auto;
 }
 .popular h2 {
+  font-family:  "Roslindale-display-medium", sans-serif;
   font-size: 48px;
   font-weight: 500;
   color: #303635;
